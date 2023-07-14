@@ -1,13 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectMessage } from "../../redux/message/selectors";
+import { selectValue } from "../../redux/myValue/selectors";
 
-import { increment, decrement } from "../../redux/message/slice";
+import { increment, decrement } from "../../redux/myValue/slice";
 import {} from "./Home.styled";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const value = useSelector(selectMessage);
-  console.log("value", value);
+  const value = useSelector(selectValue);
 
   return (
     <div>
