@@ -15,9 +15,9 @@ import {
   RegisterAuthLinkWrapper,
   RegisterAuthLinkText,
   RegisterAuthLink,
-} from "./Register.styled";
+} from "./RegisterPage.styled";
 
-export default function Register() {
+export const RegisterPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -104,4 +104,4 @@ export default function Register() {
       </RegisterWrapper>
     </>
   );
-}
+};
