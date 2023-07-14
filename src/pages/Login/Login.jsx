@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { logIn } from "../../redux/auth/authSlice";
 import { showPasswordHandler } from "../../helpers/showPasswordHandler";
 import {
   LoginWrapper,
@@ -22,6 +24,8 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
+
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case "email":
@@ -34,6 +38,14 @@ export default function Login() {
   };
 
   const handleSubmit = (event) => {
+    const email = event.currentTarget.elements.email.value;
+    const password = event.currentTarget.elements.password.value;
+
+    // console.log("form data email", email);
+    // console.log("form data password", password);
+
+    dispatch(logIn({ email, password }));
+
     event.preventDefault();
     setEmail("");
     setPassword("");

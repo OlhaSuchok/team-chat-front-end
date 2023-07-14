@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 
 export const TitleText = styled.h1`
   text-align: center;
-  padding-top: 50px;
-  color: ${({ theme }) => theme.colors.gray[800]};
+  margin-bottom: 20px;
+  margin-top: 60px;
+  color: gray;
+  font-size: 36px;
+  font-family: cursive;
 `;
