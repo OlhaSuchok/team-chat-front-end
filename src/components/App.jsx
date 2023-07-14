@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { routes } from "../constants/routes";
-import WelcomePage from "../pages/WelcomePage/WelcomePage";
-import Login from "../pages/Login/Login";
-import Register from "../pages/Register/Register";
-import Home from "../pages/Home/Home";
-import AppBar from "../pages/AppBar/AppBar";
+import { AppBar } from "./AppBar/AppBar";
+import { WelcomePage } from "../pages/WelcomePage/WelcomePage";
+import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { RegisterPage } from "../pages/RegisterPage/RegisterPage";
+import { HomePage } from "../pages/HomePage/HomePage";
 
 export const App = () => {
   return (
@@ -12,10 +12,10 @@ export const App = () => {
       <AppBar />
       <Routes>
         <Route path={routes.MAIN_PAGE} element={<WelcomePage />} />
-        <Route path={routes.REGISTER_PAGE} element={<Register />} />
-        <Route path={routes.LOGIN_PAGE} element={<Login />} />
-        <Route path={routes.HOME_PAGE} element={<Home />} />
-        <Route path="*" element={<Login />} />
+        <Route path={routes.REGISTER_PAGE} element={<RegisterPage />} />
+        <Route path={routes.LOGIN_PAGE} element={<LoginPage />} />
+        <Route path={routes.HOME_PAGE} element={<HomePage />} />
+        <Route path="*" element={<LoginPage />} />
       </Routes>
     </>
   );

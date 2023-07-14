@@ -1,8 +1,8 @@
 import Title from "../../components/common/Title/Title";
 
-export default function Home() {
+export const HomePage = () => {
   return <Title title="Home Page" />;
-}
+};
 // import { useSelector, useDispatch } from "react-redux";
 // import { selectValue } from "../../redux/myValue/selectors";
 

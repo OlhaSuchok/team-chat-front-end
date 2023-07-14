@@ -8,7 +8,7 @@ import { AuthNav } from "../../components/AuthNav/AuthNav";
 import { UserMenu } from "../../components/UserMenu/UserMenu";
 import { Header } from "./AppBar.styled";
 
-export default function AppBar() {
+export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
@@ -20,4 +20,4 @@ export default function AppBar() {
       </Suspense>
     </Header>
   );
-}
+};

@@ -18,9 +18,9 @@ import {
   LoginAuthLinkWrapper,
   LoginAuthLinkText,
   LoginAuthLink,
-} from "./Login.styled";
+} from "./LoginPage.styled";
 
-export default function Login() {
+export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -102,4 +102,4 @@ export default function Login() {
       </LoginWrapper>
     </>
   );
-}
+};
