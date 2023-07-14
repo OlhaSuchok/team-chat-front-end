@@ -11,7 +11,7 @@ export const authSlice = createSlice({
       state.isLoggedIn = true;
     },
     logOut(state, action) {
-      state.isLoggedIn = "";
+      state.login = null;
       state.isLoggedIn = false;
     },
     current(state, action) {},
