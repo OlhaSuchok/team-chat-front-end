@@ -25,6 +25,15 @@ export const LoginPage = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const navigateToRegister = () => {
+    navigate("/register", { replace: true });
+  };
+
+  const navigateToHomePage = () => {
+    navigate("/home", { replace: true });
+  };
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -41,20 +50,13 @@ export const LoginPage = () => {
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
 
-    // console.log("form data email", email);
-    // console.log("form data password", password);
-
     dispatch(logIn({ email, password }));
 
     event.preventDefault();
     setEmail("");
     setPassword("");
-  };
 
-  const navigate = useNavigate();
-
-  const navigateToRegister = () => {
-    navigate("/register", { replace: true });
+    navigateToHomePage();
   };
 
   const showPassword = () => {

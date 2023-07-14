@@ -1,6 +1,9 @@
+import { useLogOutRedirect } from "../../hooks/useLogOutRedirect";
 import Title from "../../components/common/Title/Title";
 
 export const HomePage = () => {
+  useLogOutRedirect();
+
   return <Title title="Home Page" />;
 };
 // import { useSelector, useDispatch } from "react-redux";
