@@ -9,7 +9,7 @@ export const MainNav = () => {
   return (
     <MainNavList>
       <MainNavItem>
-        <MainNavigationNavLink to="/">Home</MainNavigationNavLink>
+        <MainNavigationNavLink to="/home">Home</MainNavigationNavLink>
       </MainNavItem>
     </MainNavList>
   );
